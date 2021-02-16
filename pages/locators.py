@@ -12,3 +12,5 @@ class LoginPageLocators:
 
 class BasketPageLocators:
     ADD_TO_BASKET_BTN = (By.CSS_SELECTOR, '.btn-add-to-basket')
+    PRODUCT_NAME = (By.CSS_SELECTOR, '.product_main h1')
+    NAME_IN_ALERT = (By.CSS_SELECTOR, '.alertinner strong')

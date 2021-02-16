@@ -11,3 +11,6 @@ class MainPage(BasePage):
         login_link.click()
         alert = self.browser.switch_to.alert
         alert.accept()
+
+    def should_be_login_url(self):
+        assert 'login' in self.browser.current_url, "Url do not have login word"
