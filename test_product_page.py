@@ -5,8 +5,7 @@ import pytest
 import faker
 
 
-
-def test_user_cant_see_success_message(self, browser):
+def test_guest_cant_see_success_message(browser):
     link = 'http://selenium1py.pythonanywhere.com/ru/catalogue/coders-at-work_207/'
     page = ProductPage(browser, link)
     page.open()
@@ -26,7 +25,7 @@ def test_user_cant_see_success_message(self, browser):
                               marks=pytest.mark.xfail),
                           "http://selenium1py.pythonanywhere.com/catalogue/coders-at-work_207/?promo=offer8",
                           "http://selenium1py.pythonanywhere.com/catalogue/coders-at-work_207/?promo=offer9"])
-def test_user_can_add_product_to_basket(self, browser, links):
+def test_guest_can_add_product_to_basket(browser, links):
     page = ProductPage(browser, links)
     page.open()
     page.should_be_add_to_basket_btn()
